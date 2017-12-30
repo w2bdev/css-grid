@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing:border-box;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "hd"
+        "main"
+        "sidebar"
+        "ft";
+        grid-gap:20px;
+    }
+
+    .header{
+        grid-area: hd
+    }
+
+    .aside{
+        grid-area: sidebar
+    }
+
+    .article{
+        grid-area: main
+    }
+
+    .footer{
+        grid-area: ft
+    }
+
+    @media (min-width: 640px){
+        .grid {
+            grid-template-columns: 2fr 4fr;
+            grid-template-areas:
+            "hd hd"
+            "sidebar main"
+            "ft ft";
+        }
+    }
+
+    .grid div{
+        border : 1px solid rgb(0,95,107);
+        border-radius:3px;
+        background-color:rgba(0,95,107,0.8);
+        padding:0.2em;
+        color:#fff;
+        font-size:120%;
+        font-weight: bold;
+    }
+
+    .grid div:nth-child(even){
+        background-color:rgba(14, 60, 66, 0.8);
+    }
+
+</style>
+<body>
+    <div class="grid">
+        <div class="header">Header</div>
+        <div class="aside">Aside</div>
+        <div class="article">Article</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

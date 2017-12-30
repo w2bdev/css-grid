@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .grid{
+        display:grid;
+        grid-template-columns: 2fr 1fr 300px;
+        grid-gap:20px;
+    }
+
+    .grid div{
+        border : 1px solid rgb(0,95,107);
+        border-radius:3px;
+        background-color:rgba(0,95,107,0.8);
+        padding:0.2em;
+        color:#fff;
+        font-size:120%;
+        font-weight: bold;
+    }
+
+    .grid div:nth-child(even){
+        background-color:rgba(14, 60, 66, 0.8);
+    }
+
+</style>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>
